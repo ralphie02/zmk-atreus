@@ -33,16 +33,16 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (NIBBLE)
+      - name: West Build (ATREUS42)
         run: west build -s zmk/app -b nice_nano -- -DSHIELD=atreus42 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: NIBBLE DTS File
+      - name: ATREUS42 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: NIBBLE Kconfig file
+      - name: ATREUS42 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 atreus42_nice_nano.uf2
-      - name: Archive (NIBBLE)
+      - name: Archive (ATREUS42)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
