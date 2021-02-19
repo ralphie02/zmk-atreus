@@ -1,0 +1,32 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <017 0 &gpio0 17 0>		/* D2 */
+			, <020 0 &gpio0 20 0>		/* D3 */
+			, <022 0 &gpio0 22 0>		/* D4/A6 */
+			, <024 0 &gpio0 24 0>		/* D5 */
+			, <100 0 &gpio1 0 0>		/* D6/A7 */
+			, <111 0 &gpio1 11 0>	    /* D14 */
+			, <113 0 &gpio1 13 0>	    /* D15 */
+            , <115 0 &gpio1 15 0>	    /* A0 */
+			, <002 0 &gpio0 2 0>	    /* A1 */
+			, <029 0 &gpio0 29 0>	    /* A2 */
+			, <031 0 &gpio0 31 0>	    /* A3 */
+            ;
+
+        row-gpios
+            = <104 0 &gpio1 4 0>	    /* D8/A8 */
+			, <106 0 &gpio1 6 0>	    /* D9/A9 */
+			, <009 0 &gpio0 9 0>	    /* D10/A10 */
+			, <010 0 &gpio0 10 0>	    /* D16 */
+            ;
+    };
+};
