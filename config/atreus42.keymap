@@ -34,7 +34,7 @@
   &kp GRAVE    &kp LBKT   &kp UP     &kp RBKT   &kp K_SCROLL_UP                 &kp PG_UP  &kp N7     &kp N8     &kp N9     &kp N0
   &kp TAB      &kp LEFT   &kp DOWN   &kp RIGHT  &kp K_SCROLL_DOWN               &kp PG_DN  &kp N4     &kp N5     &kp N6     &mo FUNC
   &kp FSLH     &kp STAR   &kp MINUS  &kp PLUS   &kp BSLH                   &mt RSHFT EQUAL &kp N1     &kp N2     &kp N3     &kp RGUI
-  &trans       &trans     &trans     &trans     &trans     &trans     &trans    &trans     &trans     &kp DOT    &kp QUOTE  &trans
+  &trans       &trans     &trans     &trans     &trans     &trans     &trans    &trans     &trans     &kp DOT    &kp SQT    &trans
         >;
       };
 
