@@ -1,33 +1,23 @@
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        diode-direction = "col2row";
+#include "atreus42.dtsi"
 
-        col-gpios
-            = <&pro_micro_a 3 GPIO_ACTIVE_HIGH>     /* A3 */
-            , <&pro_micro_a 2 GPIO_ACTIVE_HIGH>     /* A2 */
-            , <&pro_micro_a 1 GPIO_ACTIVE_HIGH>     /* A1 */
-            , <&pro_micro_a 0 GPIO_ACTIVE_HIGH>     /* A0 */
-            , <&pro_micro_d 15 GPIO_ACTIVE_HIGH>    /* D15 */
-            , <&pro_micro_d 14 GPIO_ACTIVE_HIGH>    /* D14 */
-            , <&pro_micro_d 6 GPIO_ACTIVE_HIGH>     /* D6/A7 */
-            , <&pro_micro_d 5 GPIO_ACTIVE_HIGH>     /* D5 */
-            , <&pro_micro_d 4 GPIO_ACTIVE_HIGH>     /* D4/A6 */
-            , <&pro_micro_d 3 GPIO_ACTIVE_HIGH>     /* D3 */
-            , <&pro_micro_d 2 GPIO_ACTIVE_HIGH>     /* D2 */
-            ;
-
-
-        row-gpios
-            = <&pro_micro_a 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>     /* D8/A8 */
-            , <&pro_micro_a 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>     /* D9/A9 */
-            , <&pro_micro_a 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    /* D10/A10 */
-            , <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    /* D16 */
-            ;
-    };
+&kscan0{
+  col-gpios
+    = <&pro_micro_a 3 GPIO_ACTIVE_HIGH>     /* A3 */
+    , <&pro_micro_a 2 GPIO_ACTIVE_HIGH>     /* A2 */
+    , <&pro_micro_a 1 GPIO_ACTIVE_HIGH>     /* A1 */
+    , <&pro_micro_a 0 GPIO_ACTIVE_HIGH>     /* A0 */
+    , <&pro_micro_d 15 GPIO_ACTIVE_HIGH>    /* D15 */
+    , <&pro_micro_d 14 GPIO_ACTIVE_HIGH>    /* D14 */
+    , <&pro_micro_d 6 GPIO_ACTIVE_HIGH>     /* D6/A7 */
+    , <&pro_micro_d 5 GPIO_ACTIVE_HIGH>     /* D5 */
+    , <&pro_micro_d 4 GPIO_ACTIVE_HIGH>     /* D4/A6 */
+    , <&pro_micro_d 3 GPIO_ACTIVE_HIGH>     /* D3 */
+    , <&pro_micro_d 2 GPIO_ACTIVE_HIGH>     /* D2 */
+    ;
 };
