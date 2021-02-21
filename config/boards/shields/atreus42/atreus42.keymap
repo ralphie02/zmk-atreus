@@ -28,30 +28,28 @@
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |     `    |    [     |    UP    |     ]    | SCROLL_UP|                     |  PG_UP   |    7     |     8    |     9    |     0    |
 // |    TAB   |   LEFT   |   DOWN   |   RIGHT  | SCROLL_DN|                     |  PG_DN   |    4     |     5    |     6    |   LAY2   |
-// |     /    |     *    |     -    |     +    |    \     |                     | (=)SHIFT |    1     |     2    |     3    |   SUPER  |
+// |     /    |     -    |     *    |     +    |    \     |                     | (=)SHIFT |    1     |     2    |     3    |   SUPER  |
 // |__________|__________|__________|__________|__________|__________|__________|__________|__________|     .    |    DEL   |    ENT   |
         bindings = <
   &kp GRAVE    &kp LBKT   &kp UP     &kp RBKT   &kp K_SCROLL_UP                  &kp PG_UP  &kp N7     &kp N8     &kp N9     &kp N0
   &kp TAB      &kp LEFT   &kp DOWN   &kp RIGHT  &kp K_SCROLL_DOWN                &kp PG_DN  &kp N4     &kp N5     &kp N6     &mo FUNC
-  &kp FSLH     &kp STAR   &kp MINUS  &kp PLUS   &kp BSLH                    &mt RSHFT EQUAL &kp N1     &kp N2     &kp N3     &kp RGUI
+  &kp FSLH     &kp MINUS  &kp STAR   &kp PLUS   &kp BSLH                    &mt RSHFT EQUAL &kp N1     &kp N2     &kp N3     &kp RGUI
   &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp DOT    &kp DEL    &trans
         >;
       };
 
       fn_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  RESET   |   HOME   |    UP    |    END   |  VOL_UP  |                     |   F10    |    F7    |    F8    |    F9    |  RESET   |
-// |          |   LEFT   |   DOWN   |   RIGHT  |  VOL_DN  |                     |   F11    |    F4    |    F5    |    F6    |          |
-// |          |   PREV   |PLAY/PAUSE|   NEXT   |   TAB    |                     |   F12    |    F1    |    F2    |    F3    |          |
+// |  RESET   |   HOME   |    UP    |    END   |  BT NXT  |                     |   F10    |    F7    |    F8    |    F9    |  RESET   |
+// |  VOL_UP  |   LEFT   |   DOWN   |   RIGHT  |  BT_PRV  |                     |   F11    |    F4    |    F5    |    F6    |          |
+// |  VOL_DN  |   PREV   |PLAY/PAUSE|   NEXT   |  BT_CLR  |                     |   F12    |    F1    |    F2    |    F3    |          |
 // |__________|__________|__________|__________|   DEL    |__________|__________|__________|__________|          |          |   ENT    |
         bindings = <
-  &reset       &kp LBKT   &kp UP     &kp RBKT   &kp K_SCROLL_UP                  &kp F10    &kp F7     &kp F8     &kp F9     &reset
-  &kp K_VOL_UP &kp LEFT   &kp DOWN   &kp RIGHT  &kp K_SCROLL_DOWN                &kp F11    &kp F4     &kp F5     &kp F6     &trans
-  &kp K_VOL_DN &kp K_PREV &kp K_PP   &kp K_NEXT &kp TAB                          &kp F12    &kp F1     &kp F2     &kp F3     &trans
+  &reset       &kp HOME   &kp UP     &kp END    &bt BT_NXT                       &kp F10    &kp F7     &kp F8     &kp F9     &reset
+  &kp K_VOL_UP &kp LEFT   &kp DOWN   &kp RIGHT  &bt BT_PRV                       &kp F11    &kp F4     &kp F5     &kp F6     &trans
+  &kp K_VOL_DN &kp K_PREV &kp K_PP   &kp K_NEXT &bt BT_CLR                       &kp F12    &kp F1     &kp F2     &kp F3     &trans
   &trans       &trans     &trans     &trans     &kp DEL    &trans     &trans     &trans     &trans     &none      &none      &trans
         >;
       };
-
     };
 };
-
