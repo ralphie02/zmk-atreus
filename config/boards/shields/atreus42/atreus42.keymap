@@ -13,13 +13,13 @@
       default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |     Q    |     W    |     E    |     R    |     T    |                     |     Y    |    U     |     I    |     O    |     P    |
-// |     A    |     S    |     D    |     F    |     G    |                     |     H    |    J     |     K    |     L    | (;)SHIFT |
-// |     Z    |     X    |     C    |     V    |     B    |                     |     N    |    M     |     ,    |     .    |     /    |
+// |     A    |     S    |     D    |     F    |     G    |                     |     H    |    J     |     K    |     L    | SHIFT(;) |
+// |     Z    |     X    |     C    |     V    |     B    |                     |     N    |    M     |     ,    |     .    | SUPER(/) |
 // |    ESC   |    TAB   |   SUPER  |  SHIFT   |   BSPC   |    CTL   |    ALT   |   SPACE  |   LAY1   |     '    |     -    |    ENT   |
         bindings = <
     &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P
     &kp A      &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      &mt RSHFT SEMI
-    &kp Z      &kp X      &kp C      &kp V      &kp B                            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+    &kp Z      &kp X      &kp C      &kp V      &kp B                            &kp N      &kp M      &kp COMMA  &kp DOT    &mt RGUI FSLH
     &kp ESC    &kp TAB    &kp LGUI   &kp LSHFT  &kp BSPC   &kp LCTRL  &kp RALT   &kp SPACE  &mo NAVI   &kp SQT    &kp MINUS  &kp RET
         >;
       };
@@ -40,7 +40,7 @@
 
       fn_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  RESET   |   HOME   |    UP    |    END   |  BT NXT  |                     |   F10    |    F7    |    F8    |    F9    |  RESET   |
+// |BOOTLOADER|   HOME   |    UP    |    END   |  BT NXT  |                     |   F10    |    F7    |    F8    |    F9    |  RESET   |
 // |  VOL_UP  |   LEFT   |   DOWN   |   RIGHT  |  BT_PRV  |                     |   F11    |    F4    |    F5    |    F6    |          |
 // |  VOL_DN  |   PREV   |PLAY/PAUSE|   NEXT   |  BT_CLR  |                     |   F12    |    F1    |    F2    |    F3    |          |
 // |__________|__________|__________|__________|   DEL    |__________|__________|__________|__________|          |          |   ENT    |
