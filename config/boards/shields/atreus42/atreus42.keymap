@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NAVI    1
-#define FUNC    2
+#define NAV    1
+#define FUN    2
 
 / {
     keymap {
@@ -12,43 +12,43 @@
 
       default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |     Q    |     W    |     E    |     R    |     T    |                     |     Y    |    U     |     I    |     O    |     P    |
-// |     A    |     S    |     D    |     F    |     G    |                     |     H    |    J     |     K    |     L    | SHIFT(;) |
-// |     Z    |     X    |     C    |     V    |     B    |                     |     N    |    M     |     ,    |     .    | SUPER(/) |
-// |    ESC   |    TAB   |   SUPER  |  SHIFT   |   BSPC   |    CTL   |    ALT   |   SPACE  |   LAY1   |     '    |     -    |    ENT   |
+// |     Q     |     W     |     E     |     R     |     T     |                       |     Y     |    U      |     I     |     O     |     P     |
+// |     A     |     S     |     D     |     F     |     G     |                       |     H     |    J      |     K     |     L     |  SHIFT(;) |
+// |     Z     |     X     |     C     |     V     |     B     |                       |     N     |    M      |     ,     |     .     |  CTL(/)   |
+// | LAY1(ESC) | LAY2(TAB) |   SUPER   |   SHIFT   |    BSPC   |    CTL    |    ALT    |   SPACE   |   LAY1    |     [     |  LAY2(])  |    ENT    |
         bindings = <
-    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P
-    &kp A      &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      &mt RSHFT SEMI
-    &kp Z      &kp X      &kp C      &kp V      &kp B                            &kp N      &kp M      &kp COMMA  &kp DOT    &mt RGUI FSLH
-    &kp ESC    &kp TAB    &kp LGUI   &kp LSHFT  &kp BSPC   &kp LCTRL  &kp RALT   &kp SPACE  &mo NAVI   &kp SQT    &kp MINUS  &kp RET
+    &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P
+    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &mt RSHFT SEMI
+    &kp Z       &kp X       &kp C       &kp V       &kp B                               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RCTRL FSLH
+    &lt NAV ESC &lt FUN TAB &kp LGUI    &kp LSHFT   &kp BSPC  &mt LCTRL ESC  &kp RALT   &kp SPACE   &mo NAV     &kp LBKT    &kp RBKT    &kp RET
         >;
       };
 
-      navi_layer {
+      nav_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |     `    |    [     |    UP    |     ]    | SCROLL_UP|                     |  PG_UP   |    7     |     8    |     9    |     0    |
-// |    TAB   |   LEFT   |   DOWN   |   RIGHT  | SCROLL_DN|                     |  PG_DN   |    4     |     5    |     6    |   LAY2   |
-// |     /    |     -    |     *    |     +    |    \     |                     | (=)SHIFT |    1     |     2    |     3    |   SUPER  |
-// |__________|__________|__________|__________|__________|__________|__________|__________|__________|     .    |    DEL   |    ENT   |
+// |     1     |    2      |    3      |     4     |    5      |                       |    6      |    7      |     8     |     9     |     0     |
+// |    TAB    |    `      |    UP     |     \     | SCROLL_UP |                       |   LEFT    |   DOWN    |    UP     |   RIGHT   |  SHIFT(') |
+// |     .     |   LEFT    |   DOWN    |   RIGHT   | SCROLL_DN |                       |   -/_     | RALT(=/+) |   PG_UP   |   PG_DN   |  CTL(/)   |
+// |___________|___________|___________|___________|___________|___________|___________|___________|___________|   HOME    |    END    |    ENT    |
         bindings = <
-  &kp GRAVE    &kp LBKT   &kp UP     &kp RBKT   &kp K_SCROLL_UP                  &kp PG_UP  &kp N7     &kp N8     &kp N9     &kp N0
-  &kp TAB      &kp LEFT   &kp DOWN   &kp RIGHT  &kp K_SCROLL_DOWN                &kp PG_DN  &kp N4     &kp N5     &kp N6     &mo FUNC
-  &kp FSLH     &kp MINUS  &kp STAR   &kp PLUS   &kp BSLH                    &mt RSHFT EQUAL &kp N1     &kp N2     &kp N3     &kp RGUI
-  &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp DOT    &kp DEL    &trans
+    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+    &kp TAB     &kp GRAVE   &kp UP      &kp BSLH    &kp K_SCROLL_UP                     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &mt RSHFT SQT
+    &kp DOT     &kp LEFT    &kp DOWN    &kp RIGHT   &kp K_SCROLL_DOWN                  &kp MINUS &mt RALT EQUAL &kp PG_UP   &kp PG_DN   &mt RCTRL FSLH
+    &trans      &trans      &trans      &trans      &trans      &trans       &trans     &trans      &trans      &kp HOME    &kp END     &trans
         >;
       };
 
-      fn_layer {
+      fun_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |BOOTLOADER|   HOME   |    UP    |    END   |  BT NXT  |                     |   F10    |    F7    |    F8    |    F9    |  RESET   |
-// |  VOL_UP  |   LEFT   |   DOWN   |   RIGHT  |  BT_PRV  |                     |   F11    |    F4    |    F5    |    F6    |          |
-// |  VOL_DN  |   PREV   |PLAY/PAUSE|   NEXT   |  BT_CLR  |                     |   F12    |    F1    |    F2    |    F3    |          |
-// |__________|__________|__________|__________|   DEL    |__________|__________|__________|__________|          |          |   ENT    |
+// |    F1     |    F2     |    F3     |    F4     |    F5     |                       |    F6     |    F7     |    F8     |    F9     |    F10    |
+// |           |           |           |           |           |                       |           |   VOL_DN  |   VOL_UP  |           |    F11    |
+// |BOOTLOADER |   RESET   |  BT_PRV   |  BT_NXT   |  BT_CLR   |                       |           |   PREV    |PLAY/PAUSE |   NEXT    |    F12    |
+// |___________|___________|___________|___________|    DEL    |___________|___________|___________|           |           |___________|    ENT    |
         bindings = <
-  &bootloader  &kp HOME   &kp UP     &kp END    &bt BT_NXT                       &kp F10    &kp F7     &kp F8     &kp F9     &reset
-  &kp K_VOL_UP &kp LEFT   &kp DOWN   &kp RIGHT  &bt BT_PRV                       &kp F11    &kp F4     &kp F5     &kp F6     &trans
-  &kp K_VOL_DN &kp K_PREV &kp K_PP   &kp K_NEXT &bt BT_CLR                       &kp F12    &kp F1     &kp F2     &kp F3     &trans
-  &trans       &trans     &trans     &trans     &kp DEL    &trans     &trans     &trans     &trans     &none      &none      &trans
+    &kp F1      &kp F2      &kp F3      &kp F4      &bt F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
+    &none       &none       &none       &none       &none                               &none     &kp C_VOL_UP &kp C_VOL_DN &none       &kp F11
+    &bootloader &reset      &bt BT_PRV  &bt BT_NXT  &bt BT_CLR                          &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp F12
+    &trans      &trans      &trans      &trans      &kp DEL     &trans       &trans     &trans      &none       &none       &trans      &trans
         >;
       };
     };
