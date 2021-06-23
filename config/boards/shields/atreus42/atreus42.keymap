@@ -13,27 +13,27 @@
       default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |     Q     |     W     |     E     |     R     |     T     |                       |     Y     |    U      |     I     |     O     |     P     |
-// |     A     |     S     |     D     |     F     |     G     |                       |     H     |    J      |     K     |     L     |  SHIFT(;) |
-// |     Z     |     X     |     C     |     V     |     B     |                       |     N     |    M      |     ,     |     .     |  CTL(/)   |
-// | LAY1(ESC) | LAY2(TAB) |   SUPER   |   SHIFT   |    BSPC   |    CTL    |    ALT    |   SPACE   |   LAY1    |     [     |  LAY2(])  |    ENT    |
+// |     A     |     S     |     D     |     F     |     G     |                       |     H     |    J      |     K     |     L     |   CTL(;)  |
+// |     Z     |     X     |     C     |     V     |     B     |                       |     N     |    M      |     ,     |  SUPER(.) |  SHIFT(/) |
+// | LSHFT(ESC)| LAY2(TAB) |   SUPER   |   LAY1    |    BSPC   |    CTL    |    ALT    |   SPACE   |   LAY1    |     [     |  LAY2(])  |    ENT    |
         bindings = <
     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P
-    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &mt RSHFT SEMI
-    &kp Z       &kp X       &kp C       &kp V       &kp B                               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RCTRL FSLH
-    &lt NAV ESC &lt FUN TAB &kp LGUI    &kp LSHFT   &kp BSPC  &mt LCTRL ESC  &kp RALT   &kp SPACE   &mo NAV     &kp LBKT   &lt FUN RBKT &kp RET
+    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &mt RCTRL SEMI
+    &kp Z       &kp X       &kp C       &kp V       &kp B                               &kp N       &kp M       &kp COMMA  &mt RGUI DOT &mt RSHFT FSLH
+  &mt LSHFT ESC &lt FUN TAB &kp LGUI    &mo NAV     &kp BSPC    &kp LCTRL  &mt RALT ESC &kp SPACE   &mo NAV     &kp LBKT   &lt FUN RBKT &kp RET
         >;
       };
 
       nav_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |     1     |    2      |    3      |     4     |    5      |                       |    6      |    7      |     8     |     9     |     0     |
-// |    TAB    |    `      |    UP     |     \     | SCROLL_UP |                       |   LEFT    |   DOWN    |    UP     |   RIGHT   |  SHIFT(') |
-// |     .     |   LEFT    |   DOWN    |   RIGHT   | SCROLL_DN |                       |   -/_     | RALT(=/+) |   PG_UP   |   PG_DN   |  CTL(/)   |
+// |    TAB    |    `      |    UP     |     \     |           |                       |   LEFT    |   DOWN    |    UP     |   RIGHT   |   CTL(')  |
+// |   SUPER   |   LEFT    |   DOWN    |   RIGHT   |    -/_    |                       |   =/+     |   PG_DN   |   PG_UP   |  SUPER(.) |  SHIFT(/) |
 // |___________|___________|___________|___________|___________|___________|___________|___________|___________|   HOME    |    END    |    ENT    |
         bindings = <
     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-    &kp TAB     &kp GRAVE   &kp UP      &kp BSLH    &kp K_SCROLL_UP                     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &mt RSHFT SQT
-    &kp DOT     &kp LEFT    &kp DOWN    &kp RIGHT   &kp K_SCROLL_DOWN                  &kp MINUS &mt RALT EQUAL &kp PG_UP   &kp PG_DN   &mt RCTRL FSLH
+    &kp TAB     &kp GRAVE   &kp UP      &kp BSLH    &none                               &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &mt RCTRL SQT
+    &kp LGUI    &kp LEFT    &kp DOWN    &kp RIGHT   &kp MINUS                           &kp EQUAL   &kp PG_DN   &kp PG_UP  &mt RGUI DOT &mt RSHFT FSLH
     &trans      &trans      &trans      &trans      &trans      &trans       &trans     &trans      &trans      &kp HOME    &kp END     &trans
         >;
       };
