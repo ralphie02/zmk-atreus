@@ -1,3 +1,6 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
 if SHIELD_ATREUS42
 
 config ZMK_KEYBOARD_NAME
